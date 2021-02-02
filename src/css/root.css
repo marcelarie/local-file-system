@@ -1,0 +1,9 @@
+@import 'color-palette.css';
+
+* {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+    text-decoration: unset;
+    color: unset;
+}
