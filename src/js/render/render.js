@@ -4,7 +4,7 @@ const render = {
         const endPoint = document.getElementById(location);
         endPoint.insertAdjacentHTML('beforeend', component);
     },
-    renderAppend: function (component, location) {
+    renderAppend: function (component, location = 'root') {
         const endPoint = document.getElementById(location);
         endPoint.append(component);
     }

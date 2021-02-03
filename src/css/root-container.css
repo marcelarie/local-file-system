@@ -1,0 +1,13 @@
+
+body {
+    background-color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+}
+
+.root {
+    width: 75%;
+    height: 75%;
+    border-radius: 30px 0 30px 30px;
+    background-color: var(--white);
+    box-shadow: var(--purple) 0px 7px 29px 0px;
+}
