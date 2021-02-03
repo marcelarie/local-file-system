@@ -59,3 +59,7 @@ files
 mentioned folder.
 
 
+## WORKFLOW DIAGRAM
+
+![WORKFLOW](./documentation/images/WORKFLOW@2x.png)
+
