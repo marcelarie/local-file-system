@@ -1,0 +1,12 @@
+.recent-folders {
+    padding: 1rem;
+}
+
+.recent-folders__title {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.recent-folders__selector {
+    display: flex;
+}

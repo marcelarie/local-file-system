@@ -6,6 +6,8 @@
 @import 'file-manager.css';
 @import 'sidebar.css';
 @import 'main.css';
+@import 'recent-folders.css';
+@import 'folders.css';
 
 * {
     margin: unset;
