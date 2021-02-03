@@ -61,5 +61,5 @@ mentioned folder.
 
 ## WORKFLOW DIAGRAM
 
-![WORKFLOW](./documentation/images/WORKFLOW@2x.png)
+![WORKFLOW](./documentation/images/workflow-diagram.png)
 
