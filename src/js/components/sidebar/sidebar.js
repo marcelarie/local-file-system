@@ -1,10 +1,6 @@
 const sidebar = {
     name: 'sidebar',
-    template: `
-        <div class="sidebar" id="sidebar">
-            <h1>HOLA</h1>
-        </div>
-    `
+    template: ` <div class="sidebar" id="sidebar"></div> `
 }
 
 export {sidebar}
