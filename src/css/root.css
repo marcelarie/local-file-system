@@ -2,6 +2,10 @@
 @import 'root-container.css';
 @import 'helpers.css';
 @import 'nav.css';
+@import 'folder-name.css';
+@import 'file-manager.css';
+@import 'sidebar.css';
+@import 'main.css';
 
 * {
     margin: unset;

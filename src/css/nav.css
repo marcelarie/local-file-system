@@ -12,13 +12,12 @@ nav {
     height: 100%;
     align-items: center;
 }
-.nav__items-search {
-    flex: 2;
-}
+
 .nav__items input {
     all: unset;
     background-color: var(--light-grey);
     border-radius: 100px;
+    width: 70%;
     height: 30%;
     padding-left: 1em;
     font-weight: light;

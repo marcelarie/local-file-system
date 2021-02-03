@@ -1,0 +1,7 @@
+.sidebar{
+    background-color: var(--blue);
+    flex: 3;
+    height: 100%;
+    color: white;
+    border-radius: 0 30px 0 30px;
+}
