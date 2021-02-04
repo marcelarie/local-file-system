@@ -1,13 +1,20 @@
 
 
 <?php
+require('filter-type.php');
+require('file.php');
+require('folder.php');
 
 $path = $_GET['path'];
-$result = scandir($path);
-$data = json_encode($result);
+$filesArray = scandir($path);
 
-$objeto = {}
+$result = [];
 
-echo $data;
+foreach ($filesArray as $fileName) {
+    array_push($result, filterType($path, $fileName));
+}
+
+echo json_encode($result);
+
 ?>
 

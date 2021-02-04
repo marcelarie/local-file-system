@@ -1,13 +1,19 @@
 <?php
 
-require('console-log.php');
-
-function filterType($path)
+function filterType($path, $fileName)
 {
-    foreach ($path as $file) {
-        switch (filetype($file)) {
+    //delete files
 
-    }
-        console_log($file);
+    $type = filetype($path.'/'.$fileName);
+
+    switch ($type) {
+        case 'dir':
+            $dir = new Folder($fileName);
+            return $dir;
+        break;
+        case 'file':
+            $file = new File($fileName);
+            return $file;
+        break;
     }
 }

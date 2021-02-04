@@ -1,11 +1,8 @@
 <?php
 
-function removeFiles($files)
+function removeFiles($filesArray)
 {
-    print_r($files);
-    // foreach ($files as $file) {
-        // if ($file === '.' || $file === '..') {
-            // echo $file;
-        // }
-    // }
+    for ($i = 1; $i <= $filesArray; $i++) {
+        echo $i;
+    }
 }

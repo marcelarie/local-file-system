@@ -4,7 +4,6 @@ const file = {
     name: 'file',
     renderFile: function (files) {
         files.forEach(file => {
-            console.log(file)
             const template = `
                     <div class="files">
                         <p>${file}</p>
