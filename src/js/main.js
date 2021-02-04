@@ -9,6 +9,9 @@ import {folder} from './components/folders/folders.js'
 import {allFiles} from './components/all-files/all-files.js'
 import {file} from './components/files/files.js'
 
+//php
+import {scanDir} from './api/api.js'
+
 render.renderComponent(nav.template);
 render.renderComponent(fileManager.template);
 render.renderComponent(sidebar.template, 'file-manager');
@@ -16,7 +19,13 @@ render.renderComponent(main.template, 'file-manager');
 render.renderComponent(folderName.template, 'main');
 render.renderComponent(recentFolders.template, 'main');
 
-folder.renderFolder([1, 2, 3, 4]);
+scanDir('./src/php/scan-root.php',
+    folder.renderFolder
+);
+
 render.renderComponent(allFiles.template, 'main');
 file.renderFile([1, 2, 3, 4]);
 
+
+
+// php 

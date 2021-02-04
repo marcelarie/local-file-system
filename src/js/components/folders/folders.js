@@ -5,9 +5,9 @@ const folder = {
     renderFolder: function (folders) {
         folders.forEach(folder => {
             const template = `
-                <div class="folders" id="folders">
+                <div class="folders" id="${folder}">
                     <div class="folders__box"></div>
-                    <h4>${this.name}</h4>
+                    <h4>${folder}</h4>
                 </div>`
             render.renderComponent(template, 'recent-folders__selector')
         })
