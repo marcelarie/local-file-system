@@ -1,9 +1,4 @@
 <?php
-// Name ------
-// Creation date
-// Last Modified Date
-// Extension (if it’s a file)
-// Size
 class File
 {
     public $name;
