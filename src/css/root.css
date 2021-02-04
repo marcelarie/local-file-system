@@ -8,6 +8,8 @@
 @import 'main.css';
 @import 'recent-folders.css';
 @import 'folders.css';
+@import 'all-files.css';
+@import 'files.css';
 
 * {
     margin: unset;

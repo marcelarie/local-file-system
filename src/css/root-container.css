@@ -5,8 +5,8 @@ body {
 }
 
 .root {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
     border-radius: 30px 0 30px 30px;
     background-color: var(--white);
     box-shadow: var(--purple) 0px 7px 29px 0px;

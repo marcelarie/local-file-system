@@ -6,7 +6,8 @@ import {sidebar} from './components/sidebar/sidebar.js'
 import {folderName} from './components/folder-name/folder-name.js'
 import {recentFolders} from './components/recent-folders/recent-folders.js'
 import {folder} from './components/folders/folders.js'
-
+import {allFiles} from './components/all-files/all-files.js'
+import {file} from './components/files/files.js'
 
 render.renderComponent(nav.template);
 render.renderComponent(fileManager.template);
@@ -15,6 +16,7 @@ render.renderComponent(main.template, 'file-manager');
 render.renderComponent(folderName.template, 'main');
 render.renderComponent(recentFolders.template, 'main');
 
-
 folder.renderFolder([1, 2, 3, 4]);
+render.renderComponent(allFiles.template, 'main');
+file.renderFile([1, 2, 3, 4]);
 
