@@ -4,9 +4,11 @@
 require('filter-type.php');
 require('file.php');
 require('folder.php');
+require('remove-files.php');
 
 $path = $_GET['path'];
-$filesArray = scandir($path);
+$filesArray = removeFiles(scandir($path));
+
 
 $result = [];
 
