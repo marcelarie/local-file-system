@@ -1,4 +1,13 @@
 .files{
     display: flex;
     justify-content: space-around;
+    padding:0.1em 0;
+}
+
+.files__row {
+    font-size: 0.6em;
+    text-align: center;
+}
+.files__row-date {
+    font-size: 0.6em;
 }
