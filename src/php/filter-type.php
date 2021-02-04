@@ -12,8 +12,8 @@ function filterType($path, $fileName)
     $extension = getFileExtension($fileName);
 
     $size = filesize($filePath) > 1024 ?
-                    round(filesize($filePath)/1000) .'MB':
-                         filesize($filePath). 'kb';
+                    round(filesize($filePath)/1000) .' MB':
+                         filesize($filePath). ' kB';
 
     switch ($type) {
         case 'dir':
