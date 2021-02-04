@@ -4,6 +4,7 @@ const folder = {
     name: 'folder',
     renderFolder: function (folders) {
         folders.forEach(folder => {
+            console.log(folder)
             const template = `
                 <div class="folders" id="${folder}">
                     <div class="folders__box"></div>
@@ -15,3 +16,4 @@ const folder = {
 }
 
 export {folder}
+
