@@ -3,16 +3,15 @@ import {render} from '../../render/render.js'
 const file = {
     name: 'file',
     renderFile: function (files) {
-        files.forEach(file => {
-            const template = `
+        console.log(files)
+        const template = `
                     <div class="files">
-                        <p>${file}</p>
-                        <p>21/01/21</p>
-                        <p>1.4MB</p>
-                        <p>pdf</p>
+                        <p>${files.name}</p>
+                        <p>${files.date}</p>
+                        <p>${files.size}</p>
+                        <p>${files.type}</p>
                     </div>`
-            render.renderComponent(template, 'all-files__selector')
-        })
+        render.renderComponent(template, 'all-files__selector')
     }
 }
 
