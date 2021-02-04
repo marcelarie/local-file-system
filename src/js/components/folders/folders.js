@@ -8,7 +8,9 @@ const folder = {
                     <div class="folders__box"></div>
                     <h4>${folders.name}</h4>
                 </div>`
-        render.renderComponent(template, 'recent-folders__selector')
+        if (folders.dir) {
+            render.renderComponent(template, 'recent-folders__selector')
+        }
     }
 }
 
