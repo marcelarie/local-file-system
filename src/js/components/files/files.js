@@ -5,6 +5,7 @@ const file = {
     renderFile: function (files) {
         const template = `
                     <div class="files">
+                        <span class="material-icons files__row-icon">${'perm_media'}</span>
                         <p class="files__row files__row-name" id='${files.name}'>${files.name}</p>
                         <p class="files__row files__row-date" id='${files.name}'>${files.date}</p>
                         <p class="files__row files__row-date" id='${files.name}'>${files.lastDate}</p>
