@@ -10,7 +10,7 @@ import {allFiles} from './components/all-files/all-files.js'
 import {file} from './components/files/files.js'
 
 //php
-import {scanDir} from './api/api.js'
+import {api} from './api/api.js'
 
 render.renderComponent(nav.template);
 render.renderComponent(fileManager.template);
@@ -19,12 +19,16 @@ render.renderComponent(main.template, 'file-manager');
 render.renderComponent(folderName.template, 'main');
 render.renderComponent(recentFolders.template, 'main');
 
-scanDir('./src/php/scan-root.php',
+api.scanDir('./src/php/scan-root.php', '../../root',
     folder.renderFolder
 );
 
 render.renderComponent(allFiles.template, 'main');
-file.renderFile([1, 2, 3, 4]);
+
+api.scanDir('./src/php/scan-root.php', '../../root',
+    file.renderFile
+);
+
 
 
 

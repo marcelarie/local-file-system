@@ -1,5 +1,7 @@
 <?php
-$path = '../../root';
+require('remove-files.php');
+
+$path = $_GET['path'];
 
 $result = scandir($path);
 
