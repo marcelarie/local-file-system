@@ -7,10 +7,13 @@ function filterType($path, $fileName)
     $filePath= $path.'/'.$fileName;
     $type = filetype($filePath);
 
-    $date = filectime($filePath);
-    $lastMod = filemtime($filePath);
+    $date = date('d m Y h:i A', filectime($filePath));
+    $lastMod = date('d m Y h:i A', filemtime($filePath));
     $extension = getFileExtension($fileName);
-    $size = filectime($filePath);
+
+    $size = filesize($filePath) > 1024 ?
+                    round(filesize($filePath)/1000) .'MB':
+                         filesize($filePath). 'kb';
 
     switch ($type) {
         case 'dir':
