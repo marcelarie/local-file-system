@@ -1,3 +1,6 @@
+
+![DESIGN](./documentation/images/main-design.png)
+
 # LOCAL FILE SYSTEM
 
 In this project you will have to create a system file explorer that allows the 
@@ -41,13 +44,13 @@ their extension as part of the name.
 
 ## DESIGN THE PROJECT STRUCTURE
 
-- [ ] How will the interface be
-- [ ] You will have to design a wire frame of your application taking into 
+- [x] How will the interface be
+- [x] You will have to design a wire frame of your application taking into 
 account the requirements.
-- [ ] What actions can be executed by the user
-- [ ] You will have to design a use case diagram
-- [ ] Analyze and understand what brings more value to the user
-- [ ] Analyze how you will organize the project at the level of directories and
+- [x] What actions can be executed by the user
+- [x] You will have to design a use case diagram
+- [x] Analyze and understand what brings more value to the user
+- [x] Analyze how you will organize the project at the level of directories and
 files
 
 ## EXTRAS 💯

@@ -1,0 +1,13 @@
+.recent-folders {
+    padding: 1rem;
+}
+
+.recent-folders__title {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.recent-folders__selector {
+    display: flex;
+    justify-content: space-around;
+}

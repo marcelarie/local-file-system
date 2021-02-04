@@ -1,0 +1,17 @@
+.folder-name{
+    display: flex;
+}
+.folder-name__title{
+    margin-left: 1rem;
+}
+
+.folder-name__button{
+    all: unset;
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0 0.4rem;
+    border-radius: 10px;
+    margin-left: 10px;
+}

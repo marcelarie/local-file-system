@@ -1,4 +1,15 @@
 @import 'color-palette.css';
+@import 'root-container.css';
+@import 'helpers.css';
+@import 'nav.css';
+@import 'folder-name.css';
+@import 'file-manager.css';
+@import 'sidebar.css';
+@import 'main.css';
+@import 'recent-folders.css';
+@import 'folders.css';
+@import 'all-files.css';
+@import 'files.css';
 
 * {
     margin: unset;
@@ -7,3 +18,6 @@
     text-decoration: unset;
     color: unset;
 }
+
+/* foonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
