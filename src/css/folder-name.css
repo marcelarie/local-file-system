@@ -10,5 +10,10 @@
     display: flex;
     align-items: center;
     padding: 4px 0 0 4px;
-    back
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.folder-name__button:hover{
+    color: black;
 }
