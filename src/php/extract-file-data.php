@@ -1,13 +1,14 @@
 <?php
 
-function extractFileData($path, $fileName) 
+function extractFileData($filePath) 
 {
-    $filePath= $path.'/'.$fileName;
+    // $filePath= $path.'/'.$fileName;
+    $separatedDot = explode('.',$filePath);
 
     $type = filetype($filePath);
     $date = date('d m Y h:i A', filectime($filePath));
     $lastMod = date('d m Y h:i A', filemtime($filePath));
-    $extension = getFileExtension($fileName);
+    $extension = end($separatedDot);
         
 
     $size = convertFileSize($filePath);
