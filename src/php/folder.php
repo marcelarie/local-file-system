@@ -15,8 +15,4 @@ class Folder
         $this->size= $size;
         $this->dir= $dir;
     }
-    public function get_name()
-    {
-        return $this->name;
-    }
 }

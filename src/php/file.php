@@ -15,8 +15,4 @@ class File
         $this->type = $extension;
         $this->size= $size;
     }
-    public function get_name()
-    {
-        return $this->name;
-    }
 }

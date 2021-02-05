@@ -1,27 +1,20 @@
 <?php
 
 require 'get-file-extension.php';
+require 'extract-file-data.php';
 
 function filterType($path, $fileName)
 {
-    $filePath= $path.'/'.$fileName;
-    $type = filetype($filePath);
+    $data = extractFileData($path, $fileName);
 
-    $date = date('d m Y h:i A', filectime($filePath));
-    $lastMod = date('d m Y h:i A', filemtime($filePath));
-    $extension = getFileExtension($fileName);
-
-    $size = filesize($filePath) > 1024 ?
-                    round(filesize($filePath)/1000) .' MB':
-                         filesize($filePath). ' kB';
-
-    switch ($type) {
-        case 'dir':
-            $dir = new Folder($fileName, $date, $lastMod, $size);
+            //type
+    switch ($data[0]) {
+        case 'dir':                       //date    lastMod    size      
+            $dir = new Folder($fileName, $data[1], $data[2], $data[4]);
             return $dir;
         break;
-        case 'file':
-            $file = new File($fileName, $date, $lastMod, $extension, $size);
+        case 'file':                      //date  lastMod   extension   size
+            $file = new File($fileName, $data[1], $data[2], $data[3], $data[4]);
             return $file;
         break;
     }
