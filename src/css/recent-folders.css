@@ -9,5 +9,11 @@
 
 .recent-folders__selector {
     display: flex;
-    justify-content: space-around;
+    overflow-x: scroll;
+}
+
+.folders{
+    min-height: 100px;
+    min-width: 100px;
+    margin: 0 10px;
 }
