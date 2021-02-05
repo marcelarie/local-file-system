@@ -3,11 +3,16 @@
     justify-content: space-around;
     padding:0.1em 0;
     overflow: hidden;
+    cursor: pointer;
+}
+.files:hover{
+    background: var(--light-grey)
 }
 
 .files__row {
     font-size: 0.6em;
     text-align: center;
+    flex: 1;
 }
 .files__row-date {
     font-size: 0.6em;
