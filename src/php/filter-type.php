@@ -11,7 +11,7 @@ function filterType($path)
     $fileName = getFileName($path,$data);
                 //type
         switch ($data[0]) {
-            case 'dir':                       //date    lastMod    size      
+            case 'dir':                             //date    lastMod    size      
                 $dir = new Folder(end($fileName), $data[1], $data[2], $data[4]);
                 return $dir;
             break;
@@ -21,3 +21,5 @@ function filterType($path)
             break;
         }
 }
+
+?>

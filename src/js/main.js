@@ -25,6 +25,7 @@ render.renderComponent(allFiles.template, 'main');
 // api
 api.scanDir('./src/php/scan-root.php', '../../root', folder.renderFolder);
 api.scanDir('./src/php/scan-root.php', '../../root', file.renderFile);
+// api.scanDir('./src/php/scan-root.php', '../../root', file.renderFile);
 
 
 
