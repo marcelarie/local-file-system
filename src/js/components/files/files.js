@@ -1,5 +1,5 @@
 import {render} from '../../render/render.js'
-import {icons, helpers} from '../../helpers/helper.js'
+import {helpers} from '../../helpers/helper.js'
 const file = {
     name: 'file',
     renderFile: function (files) {
