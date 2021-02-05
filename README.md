@@ -31,7 +31,7 @@ their extension as part of the name.
    from that path. Therefore the user will not be able to see or navigate to the 
    parent folders of the “root” folder.
 - [ ] Upload a file to a directory
-- [ ] See the following information of files and directories
+- [x] See the following information of files and directories
     - Creation date
     - Last Modified Date
     - Extension (if it’s a file)

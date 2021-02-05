@@ -1,11 +1,14 @@
 
-
-function scanDir(php, params) {
-    axios.get(php).then(
-        ({data}) => {
-            params(data)
-        }
-    )
+const api = {
+    scanDir: function (php, path, method) {
+        axios.get(php + '?path=' + path).then(
+            ({data}) => {
+                data.forEach(file => {
+                    method(file);
+                })
+            }
+        )
+    }
 }
 
-export {scanDir}
+export {api}
