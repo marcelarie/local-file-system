@@ -1,5 +1,12 @@
 .all-files{
     padding: 1rem;
+    max-height: 100%;
+    overflow: hidden;
+}
+.all-files__selector{
+    height: 100%;
+    overflow: scroll;
+    padding: 1rem;
 }
 .all-files__title{
     margin: 0.5rem 0;

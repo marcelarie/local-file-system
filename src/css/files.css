@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     padding:0.1em 0;
+    overflow: hidden;
 }
 
 .files__row {
