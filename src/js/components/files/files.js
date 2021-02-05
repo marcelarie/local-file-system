@@ -1,11 +1,11 @@
 import {render} from '../../render/render.js'
-
+import {icons, helpers} from '../../helpers/helper.js'
 const file = {
     name: 'file',
     renderFile: function (files) {
         const template = `
                     <div class="files">
-                        <span class="material-icons files__row-icon">${'perm_media'}</span>
+                        <span class="material-icons-two-tone files__row-icon">${helpers.chooseIcon(files.type)}</span>
                         <p class="files__row files__row-name" id='${files.name}'>${files.name}</p>
                         <p class="files__row files__row-date" id='${files.name}'>${files.date}</p>
                         <p class="files__row files__row-date" id='${files.name}'>${files.lastDate}</p>

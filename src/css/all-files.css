@@ -15,12 +15,15 @@
     background-color: var(--cream);
     padding: 0.2em 0;
     display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
+    padding: 0.2em 0 0.2em 2em;
     border-radius: 100px;
 }
+
 
 .info-detail{
     font-size: 0.7em;
     font-weight: 600;
+    flex: 1;
+    text-align: center;
+    
 }
