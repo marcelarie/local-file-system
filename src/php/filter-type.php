@@ -6,7 +6,6 @@ require 'extract-file-data.php';
 function filterType($path)
 {
     $data = extractFileData($path);
-    echo $data[0];
 
     $separatedSlash = explode('/',$path);
     $fileName = end($separatedSlash);
@@ -22,6 +21,5 @@ function filterType($path)
                 return $file;
             break;
         }
-    } else {
     }
 }
