@@ -3,6 +3,9 @@ const folderName = {
     template: `
         <div class="folder-name" id="folder-name">
             <h2 class="folder-name__title" id="folder-name__title">My Files</h2>
+            <span class="material-icons">
+add_box
+</span>
             <button class="folder-name__button" id="folder-name__button">+</button>
         </div>
     `
