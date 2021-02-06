@@ -13,8 +13,6 @@ const folder = {
         }
     },
     renderFolderOnSidebar: function (folders, target) {
-        console.log(folders)
-        console.log(target)
         const template = `
             <div data-path="${folders.path}" class="folders-sidebar">
                 <span class="material-icons-two-tone child-click">folder</span>
