@@ -9,9 +9,18 @@ require('recursive-search.php');
 require('convert-file-size.php');
 require('scan-dir.php');
 
-$path = $_GET['path'];
+$data = $_GET['path'];
 
-$filesArray = findFiles($path);
+$mode = substr($data, 0, 1);
+$path = substr($data, 1);
+$filesArray;
+
+
+if ($mode === 'r') {
+    $filesArray = recursiveSearch($path);
+} else {
+    $filesArray = findFiles($path);
+}
 
 $result = [];
 
