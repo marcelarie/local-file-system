@@ -30,6 +30,8 @@ api.getData('./src/php/scan-root.php', 'r../../root', file.renderFile);
 // non-recursiveSearch
 api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnSidebar);
 
+api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnFolder, '../../root/music/win/.-folders');
+
 sidebar.sidebarFoldersListener();
 
 

@@ -5,7 +5,7 @@ const folder = {
     renderFolder: function (folders) {
         const template = `
                 <div class="folders" data-path="${folders.path}" id="${folders.name}">
-                    <div class="folders__box"></div>
+                    <div id='${folders.path}-folders' class="folders__box"></div>
                     <h4>${folders.name}</h4>
                 </div>`
         if (folders.dir) {
@@ -22,6 +22,16 @@ const folder = {
         if (folders.dir) {
             render.renderComponent(template, target)
         }
+    },
+    renderFolderOnFolder: function (folders, target) {
+        const template = `
+            <div data-path="${folders.path}" class="folders-folders">
+                <span class="material-icons-two-tone child-click">folder</span>
+            </div>`
+        if (folders.dir) {
+            render.renderComponent(template, target)
+        }
+
     }
 }
 
