@@ -23,9 +23,10 @@ render.renderComponent(recentFolders.template, 'main');
 render.renderComponent(allFiles.template, 'main');
 
 // api
-api.scanDir('./src/php/scan-root.php', '../../root', folder.renderFolder);
-api.scanDir('./src/php/scan-root.php', '../../root', file.renderFile);
-// api.scanDir('./src/php/scan-root.php', '../../root', file.renderFile);
+api.getData('./src/php/scan-root.php', '../../root', folder.renderFolder);
+api.getData('./src/php/scan-root.php', '../../root', file.renderFile);
+api.getData('./src/php/scan-root.php', '../../root', folder.renderFolderOnSidebar);
+// api.getData('./src/php/scan-root.php', '../../root', 'scan', folder.renderFolderOnSidebar);
 
 
 

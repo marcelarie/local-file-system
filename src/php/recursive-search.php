@@ -1,14 +1,15 @@
-<?php  
+<?php
 
 require 'console-log.php';
 
-function recursiveSearch($path) {
+function recursiveSearch($path)
+{
     $allFiles = [];
     $directory = new RecursiveDirectoryIterator($path);
 
-    foreach(new RecursiveIteratorIterator($directory) as $file ) {
+    foreach (new RecursiveIteratorIterator($directory) as $file) {
         array_push($allFiles, $file);
     }
-    
+
     return $allFiles;
 }

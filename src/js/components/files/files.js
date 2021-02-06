@@ -15,6 +15,16 @@ const file = {
         if (!files.dir) {
             render.renderComponent(template, 'all-files__selector')
         }
+    },
+    renderFileOnSidebar: function (files) {
+        const template = `
+            <div class="files-sidebar">
+                <span class="material-icons-two-tone">${helpers.chooseIcon(files.type)}</span>
+                <p>${files.name}</p>
+            </div>`
+        if (!files.dir) {
+            render.renderComponent(template, 'sidebar__selector')
+        }
     }
 }
 

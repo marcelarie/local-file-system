@@ -7,8 +7,10 @@ require('folder.php');
 require('remove-files.php');
 require('recursive-search.php');
 require('convert-file-size.php');
+require('scan-dir.php');
 
 $path = $_GET['path'];
+
 $filesArray = recursiveSearch($path);
 
 $result = [];
