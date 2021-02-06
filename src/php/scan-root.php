@@ -11,7 +11,7 @@ require('scan-dir.php');
 
 $path = $_GET['path'];
 
-$filesArray = recursiveSearch($path);
+$filesArray = findFiles($path);
 
 $result = [];
 

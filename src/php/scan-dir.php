@@ -8,13 +8,13 @@ function findFiles($path)
     foreach ($files as $file) {
         $filePath = $path.'/'.$file;
         if (is_dir($filePath)) {
-            array_push($allFiles, $path.'/'.$file.'/..');
+            array_push($allFiles, $path.'/'.$file.'/.');
         } else {
             array_push($allFiles, $path.'/'.$file);
         }
     }
 
-    // print_r($allFiles);
+    return removeFiles($allFiles);
     
-    return $allFiles;
+    // return $allFiles;
 }
