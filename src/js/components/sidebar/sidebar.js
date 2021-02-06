@@ -13,9 +13,9 @@ const sidebar = {
 
         sidebar.addEventListener('click', e => {
             if (e.target && e.target.classList.contains('folders-sidebar')) {
-                const path = e.target.getAttribute('data-path');
+                const path = e.target.getAttribute('data-path').slice(0, -2);
                 const id = e.target.children[2].id
-                api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnSidebar, id);
+                api.getData('./src/php/scan-root.php', 'n' + path, folder.renderFolderOnSidebar, id);
             }
         })
     }
