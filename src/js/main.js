@@ -23,9 +23,14 @@ render.renderComponent(recentFolders.template, 'main');
 render.renderComponent(allFiles.template, 'main');
 
 // api
+// recursiveSearch
 api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolder);
 api.getData('./src/php/scan-root.php', 'r../../root', file.renderFile);
-api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolderOnSidebar);
+
+// non-recursiveSearch
+api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnSidebar);
+
+sidebar.sidebarFoldersListener();
 
 
 

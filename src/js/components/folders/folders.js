@@ -12,15 +12,15 @@ const folder = {
             render.renderComponent(template, 'recent-folders__selector')
         }
     },
-    renderFolderOnSidebar: function (folders) {
+    renderFolderOnSidebar: function (folders, target) {
         const template = `
             <div class="folders-sidebar">
-                <span class="material-icons-two-tone">folder</span>
-                <p>${folders.name}</p>
+                <span class="material-icons-two-tone child-click">folder</span>
+                <p class="folders-sidebar__name child-click">${folders.name}</p>
                 <div class="folders-sidebar__files"></div>
             </div>`
         if (folders.dir) {
-            render.renderComponent(template, 'sidebar__selector')
+            render.renderComponent(template, target)
         }
     }
 }
