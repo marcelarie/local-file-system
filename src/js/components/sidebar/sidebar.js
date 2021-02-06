@@ -1,5 +1,6 @@
 import {api} from '../../api/api.js'
 import {folder} from '../folders/folders.js'
+import {file} from '../files/files.js'
 
 const sidebar = {
     name: 'sidebar',
@@ -15,6 +16,7 @@ const sidebar = {
             if (e.target && e.target.classList.contains('folders-sidebar')) {
                 const path = e.target.getAttribute('data-path').slice(0, -2);
                 const id = e.target.children[2].id
+                api.getData('./src/php/scan-root.php', 'n' + path, file.renderFileOnSidebar, id);
                 api.getData('./src/php/scan-root.php', 'n' + path, folder.renderFolderOnSidebar, id);
             }
         })
