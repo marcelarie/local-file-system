@@ -17,7 +17,7 @@ function filterType($path)
                 $dir = new Folder(end($fileName), $data[1], $data[2], $data[4], $filePath);
                     return $dir;
             break;
-            case 'file':                      //date  lastMod   extension   size
+            case 'file':                            //date  lastMod   extension   size
                 $file = new File(end($fileName), $data[1], $data[2], $data[3], $data[4], $filePath);
                 return $file;
             break;
