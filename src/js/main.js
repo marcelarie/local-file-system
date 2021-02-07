@@ -28,8 +28,8 @@ api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolder);
 api.getData('./src/php/scan-root.php', 'r../../root', file.renderFile);
 
 // non-recursiveSearch
-api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnSidebar);
+api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 
 api.getData('./src/php/scan-root.php', 'n../../root/music/win', folder.renderFolderOnFolder, '../../root/music/win/.-folders');
 api.getData('./src/php/scan-root.php', 'n../../root/music/win', file.renderFileOnFolder, '../../root/music/win/.-folders');
