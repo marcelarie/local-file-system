@@ -1,8 +1,12 @@
+import {folder} from '../components/folders/folders.js'
+
 const helpers = {
     name: 'helpers',
     chooseIcon: function (extension) {
         switch (extension) {
             case 'txt':
+            case 'doc':
+            case 'odt':
                 return 'description';
                 break;
             case 'mp3':
@@ -13,9 +17,6 @@ const helpers = {
                 break;
             case 'mp4':
                 return 'camera_roll';
-                break;
-            case 'doc':
-                return 'description';
                 break;
             case 'csv':
                 return 'assignment';
@@ -28,9 +29,6 @@ const helpers = {
                 break;
             case 'ppt':
                 return 'present_to_all';
-                break;
-            case 'odt':
-                return 'description';
                 break;
             case 'pdf':
                 return 'picture_as_pdf';
@@ -51,7 +49,9 @@ const helpers = {
                 return 'insert_drive_file';
                 break;
         }
-
+    },
+    passTheData: function (folders, data) {
+        folder.renderFolderOnFolder(folders, data);
     }
 }
 
