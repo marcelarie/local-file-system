@@ -24,3 +24,8 @@
     flex-wrap: wrap;
     overflow: hidden;
 }
+
+.folders-folders span{
+    font-size: 1em;
+    margin: 0.2em;
+}
