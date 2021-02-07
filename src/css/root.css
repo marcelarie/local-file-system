@@ -10,6 +10,8 @@
 @import 'folders.css';
 @import 'all-files.css';
 @import 'files.css';
+@import 'files-sidebar.css';
+@import 'folders-sidebar.css';
 
 * {
     margin: unset;

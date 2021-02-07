@@ -15,6 +15,26 @@ const file = {
         if (!files.dir) {
             render.renderComponent(template, 'all-files__selector')
         }
+    },
+    renderFileOnSidebar: function (files, target) {
+        const template = `
+            <div data-path="${files.path}" class="files-sidebar">
+                <span class="material-icons-two-tone child-click">${helpers.chooseIcon(files.type)}</span>
+                <p id="${files.path}" class="files-sidebar__name child-click">${files.name}</p>
+                <!-- <div id="${files.path}"></div> -->
+            </div>`
+        if (!files.dir) {
+            render.renderComponent(template, target)
+        }
+    },
+    renderFileOnFolder: function (files, target) {
+        const template = `
+            <div data-path="${files.path}" class="folders-folders">
+                <span class="material-icons-two-tone child-click">${helpers.chooseIcon(files.type)}</span>
+            </div>`
+        if (!files.dir) {
+            render.renderComponent(template, target)
+        }
     }
 }
 
