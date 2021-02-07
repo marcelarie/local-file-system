@@ -16,8 +16,15 @@ const sidebar = {
             if (e.target && e.target.classList.contains('folders-sidebar')) {
                 const path = e.target.getAttribute('data-path').slice(0, -2);
                 const id = e.target.children[2].id
-                api.getData('./src/php/scan-root.php', 'n' + path, file.renderFileOnSidebar, id);
-                api.getData('./src/php/scan-root.php', 'n' + path, folder.renderFolderOnSidebar, id);
+                const open = e.target.getAttribute('data-open')
+                if (open === 'false') {
+                    e.target.setAttribute('data-open', 'true');
+                    api.getData('./src/php/scan-root.php', 'n' + path, file.renderFileOnSidebar, id);
+                    api.getData('./src/php/scan-root.php', 'n' + path, folder.renderFolderOnSidebar, id);
+                } else {
+                    e.target.setAttribute('data-open', 'false');
+                    document.getElementById(id).innerHTML = ''
+                }
             }
         })
     }
