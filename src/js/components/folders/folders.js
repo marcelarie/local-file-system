@@ -16,7 +16,7 @@ const folder = {
         const template = `
             <div data-path="${folders.path}" data-open="false" class="folders-sidebar">
                 <div class="folders-sidebar__box child-click">
-                    <span class="material-icons-two-tone child-click">folder</span>
+                    <span class="material-icons child-click">folder</span>
                     <p class="folders-sidebar__name child-click">${folders.name}</p>
                 </div>
                 <div class="folders-sidebar__files" id="${folders.path}"></div>
@@ -28,7 +28,7 @@ const folder = {
     renderFolderOnFolder: function (folders, target) {
         const template = `
             <div data-path="${folders.path}" class="folders-folders">
-                <span class="material-icons-two-tone child-click">folder</span>
+                <span class="material-icons child-click">folder</span>
             </div>`
         if (folders.dir) {
             render.renderComponent(template, target)

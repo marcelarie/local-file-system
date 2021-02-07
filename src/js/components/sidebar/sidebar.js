@@ -19,10 +19,12 @@ const sidebar = {
                 const open = e.target.getAttribute('data-open')
                 if (open === 'false') {
                     e.target.setAttribute('data-open', 'true');
+                    e.target.children[0].children[0].textContent = 'folder_open'
                     api.getData('./src/php/scan-root.php', 'n' + path, file.renderFileOnSidebar, id);
                     api.getData('./src/php/scan-root.php', 'n' + path, folder.renderFolderOnSidebar, id);
                 } else {
                     e.target.setAttribute('data-open', 'false');
+                    e.target.children[0].children[0].textContent = 'folder'
                     document.getElementById(id).innerHTML = ''
                 }
             }
