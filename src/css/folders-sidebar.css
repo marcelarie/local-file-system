@@ -1,4 +1,13 @@
 
 .folders-sidebar {
     display: flex;
+    flex-direction: column;
+}
+
+.folders-sidebar__box {
+    display: flex;
+}
+
+.folders-sidebar__files {
+    margin-left: 1em;
 }

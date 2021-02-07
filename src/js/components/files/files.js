@@ -20,8 +20,8 @@ const file = {
         const template = `
             <div data-path="${files.path}" class="files-sidebar">
                 <span class="material-icons-two-tone child-click">${helpers.chooseIcon(files.type)}</span>
-                <p class="files-sidebar__name child-click">${files.name}</p>
-                <div id="${files.path}"></div>
+                <p id="${files.path}" class="files-sidebar__name child-click">${files.name}</p>
+                <!-- <div id="${files.path}"></div> -->
             </div>`
         if (!files.dir) {
             render.renderComponent(template, target)

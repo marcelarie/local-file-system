@@ -15,7 +15,7 @@ const sidebar = {
         sidebar.addEventListener('click', e => {
             if (e.target && e.target.classList.contains('folders-sidebar')) {
                 const path = e.target.getAttribute('data-path').slice(0, -2);
-                const id = e.target.children[2].id
+                const id = e.target.children[1].id
                 const open = e.target.getAttribute('data-open')
                 if (open === 'false') {
                     e.target.setAttribute('data-open', 'true');
