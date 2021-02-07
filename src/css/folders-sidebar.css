@@ -2,12 +2,23 @@
 .folders-sidebar {
     display: flex;
     flex-direction: column;
+    border-radius: 100px;
+    cursor: pointer;
 }
+
 
 .folders-sidebar__box {
     display: flex;
+    padding: 0.2em 0.2em;
+
 }
 
+.folders-sidebar:hover > .folders-sidebar__box > span{
+    color: #1DA1F3;
+}
+.folders-sidebar__name{
+    margin-left: 0.3em;
+}
 .folders-sidebar__files {
     margin-left: 1em;
 }

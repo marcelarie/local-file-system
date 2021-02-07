@@ -18,3 +18,11 @@
 .child-click {
    pointer-events: none;
 }
+
+.none{
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
