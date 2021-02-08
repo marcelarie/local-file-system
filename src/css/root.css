@@ -12,6 +12,7 @@
 @import 'files-sidebar.css';
 @import 'folders-sidebar.css';
 @import 'helpers.css';
+@import 'modal.css';
 
 * {
     margin: unset;
