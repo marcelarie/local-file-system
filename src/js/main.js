@@ -9,6 +9,7 @@ import {recentFolders} from './components/recent-folders/recent-folders.js'
 import {folder} from './components/folders/folders.js'
 import {allFiles} from './components/all-files/all-files.js'
 import {file} from './components/files/files.js'
+import {modal} from './components/modal/modal.js'
 
 //api && helpers
 import {api} from './api/api.js'
@@ -22,7 +23,7 @@ render.renderComponent(main.template, 'file-manager');
 render.renderComponent(folderName.template, 'main');
 render.renderComponent(recentFolders.template, 'main');
 render.renderComponent(allFiles.template, 'main');
-
+render.renderComponent(modal.template, 'main');
 // api
 // recursiveSearch
 api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolder, 'sidebar__selector', folder.renderInsideAfterRender);
@@ -40,7 +41,7 @@ sidebar.sidebarFoldersListener();
 file.trashListener();
 
 recentFolders.recentFoldersListener();
-
+modal.modalFunction();
 
 
 
