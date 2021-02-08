@@ -6,7 +6,7 @@ const modal = {
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form method="POST" action="index.php" enctype="multipart/form-data">
+                <form method="POST" action="src/php/upload-file.php" enctype="multipart/form-data">
                     <div>
                     <span>Upload a File:</span>
                     <input type="file" name="uploadedFile" />
