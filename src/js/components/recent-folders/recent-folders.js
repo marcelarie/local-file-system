@@ -22,14 +22,18 @@ const recentFolders = {
                     //go left
                     const currentPath = title.getAttribute(title.getAttributeNames()[3]);
                     const lastFolderId = currentPath + '-folders';
-                    const folder = document.getElementById(lastFolderId)
-                    this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                    const folder = document.getElementById(lastFolderId);
+                    if (currentPath) {
+                        this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                    }
 
                 } else {
                     const folderId = title.getAttribute('data-last') + '-folders'
                     const nextFolder = document.getElementById(folderId)
                     //go right
-                    this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
+                    if (folderId) {
+                        this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
+                    }
                 }
             }
         })
