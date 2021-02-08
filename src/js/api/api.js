@@ -1,3 +1,4 @@
+import {render} from '../render/render.js'
 
 const api = {
     getData: function (php, path, method, target = 'sidebar__selector', asyncMethod = 0) {
