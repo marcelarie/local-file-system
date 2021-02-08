@@ -19,7 +19,10 @@
    pointer-events: none;
 }
 
-.none {
-    display: none;
+.none{
+  display: none;
 }
 
+.hidden {
+  visibility: hidden;
+}

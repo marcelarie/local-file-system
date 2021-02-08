@@ -53,6 +53,8 @@ const helpers = {
     passTheData: function (folders, data) {
         folder.renderFolderOnFolder(folders, data);
     }
+    
+
 }
 
 export {helpers}
