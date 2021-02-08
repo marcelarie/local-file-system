@@ -3,15 +3,43 @@ const recentFolders = {
     name: 'recentFolders',
     template: `
         <div class="recent-folders" id="recent-folders">
-            <h3 class="recent-folders__title">Recent</h3>
+            <h3 id="recent-folders__title" class="recent-folders__title">Recent</h3>
             <div class="recent-folders__selector overflowXscroll" id="recent-folders__selector">
             </div>
         </div>
     `,
     folderControlArrowsListener: function () {
+        const title = document.getElementById('recent-folders__title');
+        const recentFolders = document.getElementById('recent-folders__selector');
+        const allFolders = recentFolders.children;
+        const allFiles = document.getElementById('all-files')
 
+        recentFolders.addEventListener('click', e => {
+            if (e.target && e.target.classList.contains('folders__controls-arrow')) {
+                const arrowDirection = e.target.classList[0];
+
+                if (arrowDirection === 'folders__controls-left') {
+                    //go left
+                    const currentPath = title.getAttribute(title.getAttributeNames()[3]);
+                    const lastFolderId = currentPath + '-folders';
+                    const folder = document.getElementById(lastFolderId);
+                    if (currentPath) {
+                        this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                    }
+
+                } else {
+                    const folderId = title.getAttribute('data-last') + '-folders'
+                    const nextFolder = document.getElementById(folderId)
+                    //go right
+                    if (folderId) {
+                        this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
+                    }
+                }
+            }
+        })
     },
     showCurrentFolder: function (currentFolder, allFiles, recentFolders, allFolders, mode = 0) {
+
         for (let folder of allFolders) {
             const insideBox = folder.children[0]
             if (insideBox.id !== currentFolder.id) {
@@ -26,6 +54,15 @@ const recentFolders = {
         currentFolder.classList.remove('max15vh', 'overflow-hidden', 'none');
         currentFolder.classList.add('scroll');
         currentFolder.parentElement.classList.remove('none')
+
+        // show path
+        const path = currentFolder.getAttribute('data-path');
+        const title = document.getElementById('recent-folders__title');
+        title.textContent = path.slice(6, -2);
+        if (title.getAttribute('data-next')) {
+            title.setAttribute('data-last', title.getAttribute('data-next'));
+        }
+        title.setAttribute('data-next', path);
 
         //show controls
         const controls = currentFolder.nextSibling.nextSibling;

@@ -10,12 +10,12 @@ const folder = {
                 <div class="folders" data-path="${folders.path}" id="${folders.path}">
                     <div data-open="false" data-path="${folders.path}" id='${folders.path}-folders' class="folders__box folders__box-click overflow-hidden max15vh"></div>
                     <div id="folders__controls" class="folders__controls">
-                        <div class="folders__controls-left none">
-                            <span class="material-icons">arrow_left</span>
+                        <div data-path="${folders.path}" class="folders__controls-left folders__controls-arrow none">
+                            <span class="material-icons child-click">arrow_left</span>
                         </div>
                             <h4>${folders.name}</h4>
-                        <div class="folders__controls-left none">
-                            <span class="material-icons">arrow_right</span>
+                        <div data-path="${folders.path}" class="folders__controls-right folders__controls-arrow none">
+                            <span class="material-icons child-click">arrow_right</span>
                         </div>
                     </div>
                 </div>`

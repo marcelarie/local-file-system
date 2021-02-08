@@ -37,8 +37,10 @@ api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 // api.getData('./src/php/scan-root.php', 'n../../root/music/win', file.renderFileOnFolder, '../../root/music/win/.-folders');
 
 
+nav.searchListener();
 sidebar.sidebarFoldersListener();
 file.trashListener();
+recentFolders.folderControlArrowsListener();
 
 recentFolders.recentFoldersListener();
 modal.modalFunction();
