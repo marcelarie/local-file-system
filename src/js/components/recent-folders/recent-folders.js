@@ -8,6 +8,9 @@ const recentFolders = {
             </div>
         </div>
     `,
+    folderControlArrowsListener: function () {
+
+    },
     showCurrentFolder: function (currentFolder, allFiles, recentFolders, allFolders, mode = 0) {
         for (let folder of allFolders) {
             const insideBox = folder.children[0]

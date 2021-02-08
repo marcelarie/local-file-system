@@ -9,7 +9,7 @@ const folder = {
         const template = `
                 <div class="folders" data-path="${folders.path}" id="${folders.path}">
                     <div data-open="false" data-path="${folders.path}" id='${folders.path}-folders' class="folders__box folders__box-click overflow-hidden max15vh"></div>
-                    <div class="folders__controls">
+                    <div id="folders__controls" class="folders__controls">
                         <div class="folders__controls-left none">
                             <span class="material-icons">arrow_left</span>
                         </div>

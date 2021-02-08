@@ -4,14 +4,14 @@ const file = {
     name: 'file',
     renderFile: function (files) {
         const template = `
-                    <div class="files">
+                    <div data-path="${files.path}" class="files">
                         <span class="material-icons files__row-icon child-click">${helpers.chooseIcon(files.type)}</span>
                         <p class="files__row files__row-name child-click" id='${files.name}'>${files.name}</p>
                         <p class="files__row files__row-date child-click" id='${files.name}'>${files.date}</p>
                         <p class="files__row files__row-date child-click" id='${files.name}'>${files.lastDate}</p>
                         <p class="files__row files__row-size child-click" id='${files.name}'>${files.size}</p>
                         <p class="files__row files__row-type child-click" id='${files.name}'>${files.type}</p>
-                        <span class="material-icons hidden child-click">delete</span>
+                        <span data-pat="${files.path}" class="material-icons hidden child-click">delete</span>
                     </div>`
         if (!files.dir) {
             render.renderComponent(template, 'all-files__selector')
