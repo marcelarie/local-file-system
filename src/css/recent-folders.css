@@ -9,6 +9,7 @@
 
 .recent-folders__selector {
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .folders{

@@ -48,3 +48,8 @@
     font-size: 4em;
 }
 
+.folders__controls {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+}

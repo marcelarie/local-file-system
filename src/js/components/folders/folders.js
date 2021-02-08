@@ -9,7 +9,15 @@ const folder = {
         const template = `
                 <div class="folders" data-path="${folders.path}" id="${folders.path}">
                     <div data-open="false" data-path="${folders.path}" id='${folders.path}-folders' class="folders__box folders__box-click overflow-hidden max15vh"></div>
-                    <h4>${folders.name}</h4>
+                    <div class="folders__controls">
+                        <div class="folders__controls-left none">
+                            <span class="material-icons">arrow_left</span>
+                        </div>
+                            <h4>${folders.name}</h4>
+                        <div class="folders__controls-left none">
+                            <span class="material-icons">arrow_right</span>
+                        </div>
+                    </div>
                 </div>`
         if (folders.dir) {
             render.renderComponent(template, 'recent-folders__selector')
