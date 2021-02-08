@@ -37,6 +37,7 @@ api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 
 sidebar.sidebarFoldersListener();
 
+recentFolders.recentFoldersListener();
 
 
 

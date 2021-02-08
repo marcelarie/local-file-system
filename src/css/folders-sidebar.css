@@ -11,3 +11,15 @@
 .folders-sidebar__files {
     margin-left: 1em;
 }
+
+.max15vh {
+    max-height: 15vh;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

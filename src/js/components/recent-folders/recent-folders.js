@@ -8,9 +8,31 @@ const recentFolders = {
             </div>
         </div>
     `,
-    getRecentFolders: function () {
+    recentFoldersListener: function () {
+        const recentFolders = document.getElementById('recent-folders__selector');
+        const allFiles = document.getElementById('all-files')
+        const sidebar = document.getElementById('sidebar');
 
-    },
+        recentFolders.addEventListener('click', e => {
+            if (e.target && e.target.classList.contains('folders__box')) {
+                e.target.setAttribute('data-open', 'true');
+
+                const allFolders = recentFolders.children;
+
+                for (let folder of allFolders) {
+                    const insideBox = folder.children[0]
+                    if (insideBox.id !== e.target.id) {
+                        // apply display none to other folders
+                        folder.classList.add('none');
+                        allFiles.classList.add('none');
+                        // sidebar.classList.add('none');
+
+                    }
+                }
+            }
+
+        })
+    }
 }
 
 export {recentFolders}
