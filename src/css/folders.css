@@ -50,6 +50,5 @@
 
 .folders__controls {
     display: flex;
-    text-align: center;
-    margin: 0 auto;
+    justify-content: center;
 }

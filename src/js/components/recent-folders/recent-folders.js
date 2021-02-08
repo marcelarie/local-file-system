@@ -15,26 +15,37 @@ const recentFolders = {
                 // apply display none to other folders
                 folder.classList.add('none');
             }
-            //hide all files
-            allFiles.classList.add('none');
-
-            // show currentFolder
-            currentFolder.classList.remove('max15vh', 'overflow-hidden', 'none');
-            currentFolder.classList.add('scroll');
-            currentFolder.parentElement.classList.remove('none')
-            const allCurrentFolderFiles = currentFolder.children
-
-            for (let file of allCurrentFolderFiles) {
-                // add bigger icons and show file name
-                file.classList.add('folders-folders-big')
-                file.classList.remove('child-click')
-                const fileName = file.children[1]
-                fileName.classList.remove('none')
-            }
-            // change size and scroll of recentFolders
-            recentFolders.classList.remove('overflowXscroll')
-            recentFolders.classList.add('height50vh')
         }
+        //hide all files
+        allFiles.classList.add('none');
+
+        // show currentFolder
+        currentFolder.classList.remove('max15vh', 'overflow-hidden', 'none');
+        currentFolder.classList.add('scroll');
+        currentFolder.parentElement.classList.remove('none')
+
+        //show controls
+        const controls = currentFolder.nextSibling.nextSibling;
+
+        for (let control of controls.children) {
+            if (control.classList.contains('none')) {
+                control.classList.remove('none');
+            }
+        }
+
+
+        const allCurrentFolderFiles = currentFolder.children
+
+        for (let file of allCurrentFolderFiles) {
+            // add bigger icons and show file name
+            file.classList.add('folders-folders-big')
+            file.classList.remove('child-click')
+            const fileName = file.children[1]
+            fileName.classList.remove('none')
+        }
+        // change size and scroll of recentFolders
+        recentFolders.classList.remove('overflowXscroll')
+        recentFolders.classList.add('height50vh')
     },
     recentFoldersListener: function () {
         const recentFolders = document.getElementById('recent-folders__selector');
