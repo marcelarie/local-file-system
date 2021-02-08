@@ -1,6 +1,5 @@
 @import 'color-palette.css';
 @import 'root-container.css';
-@import 'helpers.css';
 @import 'nav.css';
 @import 'folder-name.css';
 @import 'file-manager.css';
@@ -12,6 +11,7 @@
 @import 'files.css';
 @import 'files-sidebar.css';
 @import 'folders-sidebar.css';
+@import 'helpers.css';
 
 * {
     margin: unset;

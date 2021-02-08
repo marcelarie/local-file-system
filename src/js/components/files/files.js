@@ -30,7 +30,7 @@ const file = {
     },
     renderFileOnFolder: function (files, target) {
         const template = `
-            <div data-path="${files.path}" class="folders-folders">
+            <div data-path="${files.path}" class="folders-folders child-click">
                 <span class="material-icons child-click">${helpers.chooseIcon(files.type)}</span>
             </div>`
         if (!files.dir) {

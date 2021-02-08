@@ -1,7 +1,7 @@
 const allFiles = {
     name: 'allFiles',
     template: `
-    <div class="all-files">
+    <div id="all-files" class="all-files">
         <h3 class="all-files__title">All Files</h3>
         <div class="info-bar">
             <p class="info-detail">Name</p>
