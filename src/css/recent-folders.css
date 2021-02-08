@@ -22,5 +22,5 @@
 }
 
 .overflowXscroll {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
