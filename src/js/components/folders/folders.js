@@ -32,7 +32,7 @@ const folder = {
     },
     renderFolderOnFolder: function (folders, target) {
         const template = `
-            <div data-path="${folders.path}" class="folders-folders folders__box-click child-click">
+            <div data-inside="true" data-path="${folders.path}" class="folders-folders folders__box-click child-click">
                 <span class="material-icons folders-folders__icon child-click">folder</span>
                 <p class="folders-folders__name child-click none">${folders.name}</p>
             </div>`

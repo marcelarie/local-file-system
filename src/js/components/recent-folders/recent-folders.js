@@ -16,11 +16,12 @@ const recentFolders = {
         recentFolders.addEventListener('click', e => {
             if (e.target && e.target.classList.contains('folders__box-click')) {
 
-                console.log(e.target)
-                if (e.target.getAttribute('data-open') === 'true') {
-                    e.target.addEventListener('click', e => {
-                        console.log(e.target)
-                    })
+                // console.log(e.target)
+                if (e.target.getAttribute('data-inside') === 'true') {
+                    if (e.target.classList.contains('folders-folders')) {
+                        const path = e.target.getAttribute('data-path')
+                        console.log(path)
+                    }
                 } else if (e.target.getAttribute('data-open') === 'false') {
                     console.log('open')
                     e.target.setAttribute('data-open', 'true');
