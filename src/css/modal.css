@@ -20,10 +20,24 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 70%; /* Could be more or less, depending on screen size */
     border-radius: 30px 0 30px 30px;
+    box-shadow: 0px 8px 17px 2px rgba(0,0,0,0.14) , 0px 3px 14px 2px rgba(0,0,0,0.12) , 0px 5px 5px -3px rgba(0,0,0,0.2) ;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
 }
   
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
   /* The Close Button */
 .close {
     color: #aaa;
@@ -42,4 +56,78 @@
 #myBtn{
     background: none;
     border: none;
+}
+
+/* DROP ZONE */
+
+.drop-zone{
+    width: 200px;
+    height: 200px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed var(--blue);
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.drop-zone--over{
+    border-style: solid;    
+}
+
+.drop-zone__input{
+    display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title{
+    text-align:center;
+    font-weight: 600;
+}
+
+.uploadBtn{
+    background: var(--blue);
+    color: white;
+    padding: 0.3em 1em;
+    border: none;
+    border-radius: 10px;
+}
+
+.uploadBtn:hover{
+    background: rgb(29, 161, 242);
+    transition: 0.3s;
+    cursor: pointer;
 }

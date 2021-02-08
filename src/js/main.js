@@ -42,6 +42,8 @@ file.trashListener();
 
 recentFolders.recentFoldersListener();
 modal.modalFunction();
+modal.dropZoneFunction();
+
 
 
 
