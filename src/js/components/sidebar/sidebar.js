@@ -17,7 +17,7 @@ const sidebar = {
             if (e.target && e.target.classList.contains('folders-sidebar')) {
                 const path = e.target.getAttribute('data-path').slice(0, -2);
                 const id = e.target.children[1].id
-                 const open = e.target.getAttribute('data-open')
+                const open = e.target.getAttribute('data-open')
                 if (open === 'false') {
                     e.target.setAttribute('data-open', 'true');
                     e.target.children[0].children[0].textContent = 'folder_open'

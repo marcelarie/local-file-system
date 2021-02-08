@@ -24,7 +24,18 @@
     cursor: pointer;
 }
 
-.folders-folders span{
+.folders-folders {
+    text-align: center;
+}
+.folders-folders__icon {
     font-size: 1em;
-    margin: 0.2em;
+    margin: 0.1em 0.120em;
+}
+
+.folders-folders-big {
+    margin: 3em;
+}
+
+.folders-folders__icon {
+    font-size: 3em;
 }

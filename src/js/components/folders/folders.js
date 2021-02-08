@@ -33,7 +33,8 @@ const folder = {
     renderFolderOnFolder: function (folders, target) {
         const template = `
             <div data-path="${folders.path}" class="folders-folders child-click">
-                <span class="material-icons child-click">folder</span>
+                <span class="material-icons folders-folders__icon child-click">folder</span>
+                <p class="folders-folders__name none">${folders.name}</p>
             </div>`
         if (folders.dir) {
             render.renderComponent(template, target)

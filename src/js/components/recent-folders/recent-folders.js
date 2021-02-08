@@ -12,6 +12,7 @@ const recentFolders = {
         const recentFolders = document.getElementById('recent-folders__selector');
         const allFiles = document.getElementById('all-files')
         // const sidebar = document.getElementById('sidebar');
+        const foldersFolders = document.getElementById('folders-folders')
 
         recentFolders.addEventListener('click', e => {
             if (e.target && e.target.classList.contains('folders__box')) {
@@ -26,11 +27,16 @@ const recentFolders = {
                         folder.classList.add('none');
                         e.target.classList.remove('max15vh', 'overflow-hidden');
                         e.target.classList.add('scroll');
+
+                        //hide all files
                         allFiles.classList.add('none');
-                        // sidebar.classList.add('none');
+
+                        // change size and scroll of recentFolders
                         recentFolders.classList.remove('overflowXscroll')
                         recentFolders.classList.add('height50vh')
 
+                        //
+                        // foldersFolders.classList.add('folders-folders-big')
                     }
                 }
             }
