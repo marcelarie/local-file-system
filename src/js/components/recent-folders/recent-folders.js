@@ -26,16 +26,14 @@ const recentFolders = {
 
         //show controls
         const controls = currentFolder.nextSibling.nextSibling;
-
         for (let control of controls.children) {
             if (control.classList.contains('none')) {
                 control.classList.remove('none');
             }
         }
 
-
+        // make folter modal full the screen
         const allCurrentFolderFiles = currentFolder.children
-
         for (let file of allCurrentFolderFiles) {
             // add bigger icons and show file name
             file.classList.add('folders-folders-big')

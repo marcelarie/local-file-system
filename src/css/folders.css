@@ -51,4 +51,14 @@
 .folders__controls {
     display: flex;
     justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.folders__controls h4 {
+    margin: 0 auto;
+    font-size: 2vw;
+}
+.folders__controls span {
+    font-size: 3em;
 }
