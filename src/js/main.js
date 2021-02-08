@@ -44,6 +44,7 @@ recentFolders.recentFoldersListener();
 modal.modalFunction();
 modal.dropZoneFunction();
 
+file.deleteFileListener();
 
 
 
