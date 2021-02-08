@@ -36,9 +36,10 @@ api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 // api.getData('./src/php/scan-root.php', 'n../../root/music/win', file.renderFileOnFolder, '../../root/music/win/.-folders');
 
 
-recentFolders.recentFoldersListener();
 sidebar.sidebarFoldersListener();
 file.trashListener();
+
+recentFolders.recentFoldersListener();
 
 
 
