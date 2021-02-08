@@ -27,15 +27,22 @@
 .folders-folders {
     text-align: center;
 }
-.folders-folders__icon {
+
+.folders-folders span {
     font-size: 1em;
+    text-align: center;
+}
+
+.folders-folders__icon {
     margin: 0.1em 0.120em;
 }
 
 .folders-folders-big {
-    margin: 3em;
+    margin: 1em;
+    text-align: center;
 }
 
-.folders-folders__icon {
-    font-size: 3em;
+.folders-folders-big span {
+    font-size: 4em;
 }
+

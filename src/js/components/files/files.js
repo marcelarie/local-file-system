@@ -30,9 +30,9 @@ const file = {
     },
     renderFileOnFolder: function (files, target) {
         const template = `
-            <div data-path="${files.path}" class="folders-folders child-click">
+            <div data-path="${files.path}" class="folders-folders folders__box-click child-click">
                 <span class="material-icons folders-folders__icon child-click">${helpers.chooseIcon(files.type)}</span>
-                <p class="folders-folders__name none">${files.name}</p>
+                <p class="folders-folders__name child-click none">${files.name}</p>
             </div>`
         if (!files.dir) {
             render.renderComponent(template, target)

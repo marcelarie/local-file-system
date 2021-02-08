@@ -12,35 +12,51 @@ const recentFolders = {
         const recentFolders = document.getElementById('recent-folders__selector');
         const allFiles = document.getElementById('all-files')
         // const sidebar = document.getElementById('sidebar');
-        const foldersFolders = document.getElementById('folders-folders')
 
         recentFolders.addEventListener('click', e => {
-            if (e.target && e.target.classList.contains('folders__box')) {
-                e.target.setAttribute('data-open', 'true');
+            if (e.target && e.target.classList.contains('folders__box-click')) {
 
-                const allFolders = recentFolders.children;
+                console.log(e.target)
+                if (e.target.getAttribute('data-open') === 'true') {
+                    e.target.addEventListener('click', e => {
+                        console.log(e.target)
+                    })
+                } else if (e.target.getAttribute('data-open') === 'false') {
+                    console.log('open')
+                    e.target.setAttribute('data-open', 'true');
 
-                for (let folder of allFolders) {
-                    const insideBox = folder.children[0]
-                    if (insideBox.id !== e.target.id) {
-                        // apply display none to other folders
-                        folder.classList.add('none');
-                        e.target.classList.remove('max15vh', 'overflow-hidden');
-                        e.target.classList.add('scroll');
+                    const allFolders = recentFolders.children;
 
-                        //hide all files
-                        allFiles.classList.add('none');
+                    for (let folder of allFolders) {
+                        const insideBox = folder.children[0]
+                        if (insideBox.id !== e.target.id) {
+                            // apply display none to other folders
+                            folder.classList.add('none');
+                            e.target.classList.remove('max15vh', 'overflow-hidden');
+                            e.target.classList.add('scroll');
 
-                        // change size and scroll of recentFolders
-                        recentFolders.classList.remove('overflowXscroll')
-                        recentFolders.classList.add('height50vh')
+                            //hide all files
+                            allFiles.classList.add('none');
 
-                        //
-                        // foldersFolders.classList.add('folders-folders-big')
+                            // change size and scroll of recentFolders
+                            recentFolders.classList.remove('overflowXscroll')
+                            recentFolders.classList.add('height50vh')
+
+                            const allCurrentFolderFiles = e.target.children
+
+                            for (let file of allCurrentFolderFiles) {
+                                // add bigger icons and show file name
+                                file.classList.add('folders-folders-big')
+                                file.classList.remove('child-click')
+                                // file.children[0].classList.remove('child-click')
+                                // file.children[1].classList.remove('child-click')
+                                const fileName = file.children[1]
+                                fileName.classList.remove('none')
+                            }
+                        }
                     }
                 }
             }
-
         })
     }
 }

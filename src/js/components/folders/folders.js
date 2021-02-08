@@ -8,7 +8,7 @@ const folder = {
     renderFolder: function (folders) {
         const template = `
                 <div class="folders" data-path="${folders.path}" id="${folders.path}">
-                    <div data-open="false" id='${folders.path}-folders' class="folders__box overflow-hidden max15vh"></div>
+                    <div data-open="false" id='${folders.path}-folders' class="folders__box folders__box-click overflow-hidden max15vh"></div>
                     <h4>${folders.name}</h4>
                 </div>`
         if (folders.dir) {
@@ -32,9 +32,9 @@ const folder = {
     },
     renderFolderOnFolder: function (folders, target) {
         const template = `
-            <div data-path="${folders.path}" class="folders-folders child-click">
+            <div data-path="${folders.path}" class="folders-folders folders__box-click child-click">
                 <span class="material-icons folders-folders__icon child-click">folder</span>
-                <p class="folders-folders__name none">${folders.name}</p>
+                <p class="folders-folders__name child-click none">${folders.name}</p>
             </div>`
         if (folders.dir) {
             render.renderComponent(template, target)
