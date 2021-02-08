@@ -1,3 +1,4 @@
+import {allFiles} from '../all-files/all-files.js'
 
 const nav = {
     name: 'nav',
@@ -10,6 +11,19 @@ const nav = {
             
         </nav>
     `,
+    searchListener: function () {
+        const searchBar = document.getElementById('nav__items-search')
+
+
+
+        searchBar.addEventListener('input', e => {
+            if (searchBar.value) {
+                allFiles.showAllFiles('show');
+            } else {
+                allFiles.showAllFiles('hide');
+            }
+        })
+    }
 }
 
 export {nav}
