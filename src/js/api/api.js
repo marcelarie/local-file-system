@@ -16,7 +16,15 @@ const api = {
                 })
             }
         })
+    },
+    deleteFile: function (php, path) {
+        axios.get(php + '?path=' + path).then(
+            ({data}) => {
+                console.log(data);
+            }
+        )
     }
+
 }
 
 export {api}

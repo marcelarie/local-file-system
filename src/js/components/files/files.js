@@ -1,5 +1,7 @@
 import {render} from '../../render/render.js'
 import {helpers} from '../../helpers/helper.js'
+import { api } from '../../api/api.js'
+
 const file = {
     name: 'file',
     renderFile: function (files) {
@@ -11,7 +13,8 @@ const file = {
                         <p class="files__row files__row-date child-click" id='${files.name}'>${files.lastDate}</p>
                         <p class="files__row files__row-size child-click" id='${files.name}'>${files.size}</p>
                         <p class="files__row files__row-type child-click" id='${files.name}'>${files.type}</p>
-                        <span data-pat="${files.path}" class="material-icons hidden child-click">delete</span>
+                        <span class="material-icons hidden child-click" data-path="${files.path}">delete</span>
+                        
                     </div>`
         if (!files.dir) {
             render.renderComponent(template, 'all-files__selector')
@@ -54,6 +57,16 @@ const file = {
                 trash.classList.add('hidden');
             };
         });
+    },
+
+    deleteFileListener: function () {
+        const allFiles = document.getElementById('all-files__selector');
+        
+        allFiles.addEventListener("click", e => {
+            const path = e.target.getAttribute('data-path');
+            console.log(path);
+            api.deleteFile('./src/php/delete.php', path);
+        })
     }
 
 }
