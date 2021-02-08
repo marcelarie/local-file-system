@@ -9,9 +9,10 @@ import {recentFolders} from './components/recent-folders/recent-folders.js'
 import {folder} from './components/folders/folders.js'
 import {allFiles} from './components/all-files/all-files.js'
 import {file} from './components/files/files.js'
-//api
+
+//api && helpers
 import {api} from './api/api.js'
-import { helpers } from './helpers/helper.js'
+import {helpers} from './helpers/helper.js'
 
 // first render
 render.renderComponent(nav.template);
@@ -24,19 +25,20 @@ render.renderComponent(allFiles.template, 'main');
 
 // api
 // recursiveSearch
-api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolder);
+api.getData('./src/php/scan-root.php', 'r../../root', folder.renderFolder, 'sidebar__selector', folder.renderInsideAfterRender);
 api.getData('./src/php/scan-root.php', 'r../../root', file.renderFile);
 
 // non-recursiveSearch
 api.getData('./src/php/scan-root.php', 'n../../root', folder.renderFolderOnSidebar);
 api.getData('./src/php/scan-root.php', 'n../../root', file.renderFileOnSidebar);
 
-api.getData('./src/php/scan-root.php', 'n../../root/music/win', folder.renderFolderOnFolder, '../../root/music/win/.-folders');
-api.getData('./src/php/scan-root.php', 'n../../root/music/win', file.renderFileOnFolder, '../../root/music/win/.-folders');
+// api.getData('./src/php/scan-root.php', 'n../../root/music/win', folder.renderFolderOnFolder, '../../root/music/win/.-folders');
+// api.getData('./src/php/scan-root.php', 'n../../root/music/win', file.renderFileOnFolder, '../../root/music/win/.-folders');
 
 
 sidebar.sidebarFoldersListener();
 file.trashListener();
+
 
 
 

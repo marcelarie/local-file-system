@@ -1,16 +1,21 @@
 import {render} from '../../render/render.js'
+import {file} from '../files/files.js'
+import {api} from '../../api/api.js'
+import {helpers} from '../../helpers/helper.js'
 
 const folder = {
     name: 'folder',
     renderFolder: function (folders) {
         const template = `
-                <div class="folders" data-path="${folders.path}" id="${folders.name}">
+                <div class="folders" data-path="${folders.path}" id="${folders.path}">
                     <div id='${folders.path}-folders' class="folders__box"></div>
                     <h4>${folders.name}</h4>
                 </div>`
         if (folders.dir) {
             render.renderComponent(template, 'recent-folders__selector')
+            // folder.repeatMethod(folders.path, api.getData)
         }
+
     },
     renderFolderOnSidebar: function (folders, target) {
         const template = `
@@ -34,6 +39,16 @@ const folder = {
             render.renderComponent(template, target)
         }
 
+    },
+    renderInsideAfterRender: function (idFolder) {
+        const folder = document.getElementById(idFolder);
+
+        if (folder) {
+            const path = idFolder.slice(0, -10)
+
+            api.getData('src/php/scan-root.php', 'n' + path, file.renderFileOnFolder, idFolder)
+            api.getData('src/php/scan-root.php', 'n' + path, helpers.passTheData, idFolder)
+        }
     }
 }
 
