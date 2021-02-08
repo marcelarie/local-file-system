@@ -15,16 +15,16 @@ const nav = {
         const searchBar = document.getElementById('nav__items-search')
 
         searchBar.addEventListener('input', e => {
-            console.log(e.inputType)
             if (searchBar.value) {
                 allFiles.showAllFiles('show');
                 this.filterResults(searchBar.value)
             } else {
                 allFiles.showAllFiles('hide');
+                this.filterResults(searchBar.value)
             }
         })
     },
-    filterResults: function (value) {
+    filterResults: function (value, clear = false) {
         const allResults = document.getElementById('all-files__selector').children
         if (value) {
             for (let result of allResults) {
@@ -34,6 +34,11 @@ const nav = {
                     result.classList.remove('none')
                 }
             }
+        } else {
+            for (let result of allResults) {
+                result.classList.remove('none')
+            }
+
         }
 
     }
