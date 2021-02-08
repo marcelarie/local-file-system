@@ -20,11 +20,45 @@
     border-radius: 25px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     cursor: pointer;
 }
 
-.folders-folders span{
+.folders-folders {
+    text-align: center;
+}
+
+.folders-folders span {
     font-size: 1em;
-    margin: 0.2em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.folders-folders__icon {
+    margin: 0.1em 0.120em;
+}
+
+.folders-folders-big {
+    margin: 1em;
+    text-align: center;
+}
+
+.folders-folders-big span {
+    font-size: 4em;
+}
+
+.folders__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.folders__controls h4 {
+    margin: 0 auto;
+    font-size: 2vw;
+}
+.folders__controls span {
+    font-size: 3em;
 }

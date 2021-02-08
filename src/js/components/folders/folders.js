@@ -8,8 +8,16 @@ const folder = {
     renderFolder: function (folders) {
         const template = `
                 <div class="folders" data-path="${folders.path}" id="${folders.path}">
-                    <div data-open="false" id='${folders.path}-folders' class="folders__box overflow-hidden max15vh"></div>
-                    <h4>${folders.name}</h4>
+                    <div data-open="false" data-path="${folders.path}" id='${folders.path}-folders' class="folders__box folders__box-click overflow-hidden max15vh"></div>
+                    <div id="folders__controls" class="folders__controls">
+                        <div class="folders__controls-left none">
+                            <span class="material-icons">arrow_left</span>
+                        </div>
+                            <h4>${folders.name}</h4>
+                        <div class="folders__controls-left none">
+                            <span class="material-icons">arrow_right</span>
+                        </div>
+                    </div>
                 </div>`
         if (folders.dir) {
             render.renderComponent(template, 'recent-folders__selector')
@@ -32,8 +40,9 @@ const folder = {
     },
     renderFolderOnFolder: function (folders, target) {
         const template = `
-            <div data-path="${folders.path}" class="folders-folders child-click">
-                <span class="material-icons child-click">folder</span>
+            <div data-inside="true" data-path="${folders.path}" data-type="${folders.dir}" class="folders-folders folders__box-click child-click">
+                <span class="material-icons folders-folders__icon child-click">folder</span>
+                <p class="folders-folders__name child-click none">${folders.name}</p>
             </div>`
         if (folders.dir) {
             render.renderComponent(template, target)

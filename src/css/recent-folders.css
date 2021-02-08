@@ -9,6 +9,7 @@
 
 .recent-folders__selector {
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .folders{
@@ -22,5 +23,5 @@
 }
 
 .overflowXscroll {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
