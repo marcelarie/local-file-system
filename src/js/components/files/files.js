@@ -1,6 +1,6 @@
 import {render} from '../../render/render.js'
 import {helpers} from '../../helpers/helper.js'
-import { api } from '../../api/api.js'
+import {api} from '../../api/api.js'
 
 const file = {
     name: 'file',
@@ -61,11 +61,13 @@ const file = {
 
     deleteFileListener: function () {
         const allFiles = document.getElementById('all-files__selector');
-        
+
         allFiles.addEventListener("click", e => {
             const path = e.target.getAttribute('data-path');
             console.log(path);
             api.deleteFile('./src/php/delete.php', path);
+            document.getElementById('all-files__selector').innerHTML = ''
+            api.getData('./src/php/scan-root.php', 'r../../root', file.renderFile);
         })
     }
 
