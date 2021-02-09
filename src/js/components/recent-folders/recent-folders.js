@@ -19,17 +19,25 @@ const recentFolders = {
                 const arrowDirection = e.target.classList[0];
 
                 if (arrowDirection === 'folders__controls-left') {
-                    //go left
+                    //go one folder to the back
                     const path = title.getAttribute('data-current')
                     const lastFolder = path.split('/').slice(0, -2).join('/') + '/.-folders'
                     const folder = document.getElementById(lastFolder)
 
-                    this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
-                    recentFolders.setAttribute('data-next', path)
+                    // stop at root folder
+                    if (lastFolder !== '../../.-folders') {
+                        this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                        title.setAttribute('data-next', path)
+                    }
 
                 } else {
-                    //go right
-                    // this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
+                    //go one folder up
+                    const path = title.getAttribute('data-next')
+                    if (path) {
+                        const folder = document.getElementById(path + '-folders')
+                        this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                    }
+
                 }
             }
         })
