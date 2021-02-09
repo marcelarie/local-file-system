@@ -28,6 +28,8 @@ const recentFolders = {
                     if (lastFolder !== '../../.-folders') {
                         this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
                         title.setAttribute('data-next', path)
+                    } else {
+                        location.reload();
                     }
 
                 } else {
