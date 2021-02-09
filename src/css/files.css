@@ -17,3 +17,10 @@
 .files__row-date {
     font-size: 0.6em;
 }
+
+.files__row-name {
+}
+
+.files__row-size, .files__row-type {
+    flex: 0.3;
+}
