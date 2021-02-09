@@ -20,20 +20,16 @@ const recentFolders = {
 
                 if (arrowDirection === 'folders__controls-left') {
                     //go left
-                    const currentPath = title.getAttribute(title.getAttributeNames()[3]);
-                    const lastFolderId = currentPath + '-folders';
-                    const folder = document.getElementById(lastFolderId);
-                    if (currentPath) {
-                        this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
-                    }
+                    const path = title.getAttribute('data-current')
+                    const lastFolder = path.split('/').slice(0, -2).join('/') + '/.-folders'
+                    const folder = document.getElementById(lastFolder)
+
+                    this.showCurrentFolder(folder, allFiles, recentFolders, allFolders);
+                    recentFolders.setAttribute('data-next', path)
 
                 } else {
-                    const folderId = title.getAttribute('data-last') + '-folders'
-                    const nextFolder = document.getElementById(folderId)
                     //go right
-                    if (folderId) {
-                        this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
-                    }
+                    // this.showCurrentFolder(nextFolder, allFiles, recentFolders, allFolders);
                 }
             }
         })
@@ -59,10 +55,11 @@ const recentFolders = {
         const path = currentFolder.getAttribute('data-path');
         const title = document.getElementById('recent-folders__title');
         title.textContent = path.slice(6, -2);
-        if (title.getAttribute('data-next')) {
-            title.setAttribute('data-last', title.getAttribute('data-next'));
+
+        if (title.getAttribute('data-current')) {
+            title.setAttribute('data-last', title.getAttribute('data-current'));
         }
-        title.setAttribute('data-next', path);
+        title.setAttribute('data-current', path);
 
         //show controls
         const controls = currentFolder.nextSibling.nextSibling;
